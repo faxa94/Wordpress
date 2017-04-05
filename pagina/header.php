@@ -24,5 +24,28 @@
             );
             ?>
         </nav>
+        <!--> navbar resposive
+            <nav class="navbar navbar-light"  style="background-color: #e3f2fd;" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span>MENU</span>
+                </button>
+                <a class="navbar-brand" href="/Home">Home</a>
+            </div>
+
+            <?php
+            wp_nav_menu(array(
+                'menu' => 'primary',
+                'theme_location' => 'primary',
+                'depth' => 2,
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id' => 'bs-example-navbar-collapse-1',
+                'menu_class' => 'nav navbar-nav',
+                'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                'walker' => new WP_Bootstrap_Navwalker())
+            );
+            ?>
+        </nav>  <-->
     </body>
 </html>
